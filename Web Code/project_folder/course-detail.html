@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل كورس: البرمجة بلغة بايثون</title>
+    <link rel="stylesheet" href="css/colors.css"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="js/images/logo.png" alt="شعار الأكاديمية" style="height: 40px; margin-top: -5px;">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="courses.html">الكورسات</a>
+            <a href="profile.html">بروفايلي</a>
+            <a href="#" onclick="logout()" class="btn btn-secondary">تسجيل الخروج</a>
+        </nav>
+    </header>
+
+    <section class="detail-header" style="background-color: var(--color-bg-white); padding: 40px 0; border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <h1>كورس: البرمجة بلغة بايثون للمبتدئين</h1>
+            <p style="font-size: 1.1em; color: var(--color-text-light); margin: 10px 0;">المدرب: وسيم القيسي | <span class="star-rating">⭐️⭐️⭐️⭐️⭐️ مجاني</span> (مقدم بالكامل داخل الموقع)</p>
+        </div>
+    </section>
+
+    <div class="container detail-layout">
+        
+        <main class="main-content">
+            
+            <div id="video-player-container" class="video-player-container">
+                <p id="current-video-title" class="video-title-display">الرجاء اختيار درس للبدء في المشاهدة</p>
+                <div class="video-responsive">
+                    <video id="main-video-player" controls preload="auto" style="width: 100%; height: 100%;">
+                        <source src="js/intro-default.mp4" type="video/mp4">
+                        متصفحك لا يدعم مشغل الفيديو.
+                    </video>
+                </div>
+            </div>
+
+            <h2 style="color: var(--color-primary);">ملخص الكورس</h2>
+            <p style="margin-top: 10px; font-size: 1.05em;">جميع الدروس متوفرة للتشغيل مباشرة في هذه الصفحة بعد تسجيل الدخول. اختر الدرس الذي تريد من قائمة المنهج أدناه.</p>
+
+            <h2 style="margin-top: 30px;">منهج الكورس بالتفصيل (دروس قابلة للتشغيل)</h2>
+            <div class="course-outline">
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>الوحدة 1: مقدمة بايثون (3 دروس)</span>
+                        <span>انقر للتشغيل</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><a href="#" onclick="loadVideo('python-lesson1.mp4', 'الدرس 1: تثبيت بايثون وبيئة العمل')" style="font-weight: bold; color: var(--color-text-dark);">الدرس 1: تثبيت بايثون وبيئة العمل</a></li>
+                            <li><a href="#" onclick="loadVideo('python-lesson2.mp4', 'الدرس 2: المتغيرات وأنواع البيانات')" style="font-weight: bold; color: var(--color-text-dark);">الدرس 2: المتغيرات وأنواع البيانات</a></li>
+                            <li><a href="#" onclick="loadVideo('python-lesson3.mp4', 'الدرس 3: العمليات الحسابية والمنطقية')" style="font-weight: bold; color: var(--color-text-dark);">الدرس 3: العمليات الحسابية والمنطقية</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h2 style="margin-top: 30px;">عن المدرب - وسيم القيسي</h2>
+            <div style="display: flex; gap: 20px; align-items: center; margin-top: 15px; background-color: var(--color-bg-white); padding: 15px; border-radius: 8px;">
+                <img data-src="js/images/instructor-wasim.jpg" alt="وسيم القيسي" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-accent); opacity: 0; transition: opacity 0.5s;" src="placeholder.jpg">
+                <div>
+                    <h3 style="margin: 0; color: var(--color-text-dark);">وسيم القيسي</h3>
+                    <p style="color: var(--color-primary); font-weight: bold;">خبير برمجة بخبرة واسعة ومئات المشاريع</p>
+                    <p style="font-size: 0.95em; margin-top: 5px;">مدرب معتمد ومتخصص في تطوير تطبيقات البرمجة الحديثة. </p>
+                </div>
+            </div>
+
+        </main>
+        
+        <aside class="sidebar">
+            <img data-src="course_thumbnails/course-python.jpg" alt="صورة الكورس" style="width: 100%; border-radius: 6px; margin-bottom: 15px; opacity: 0; transition: opacity 0.5s;" src="placeholder.jpg">
+            <div style="text-align: center;">
+                <span style="font-size: 3em; font-weight: bold; color: var(--color-success);">مجاني</span>
+                <p style="color: var(--color-primary); font-weight: bold; margin-top: 5px; font-size: 1.1em;">ابدأ التعلم الآن!</p>
+                <a href="#" class="btn btn-secondary" 
+                   onclick="loadVideo('python-lesson1.mp4', 'مقدمة الكورس')" 
+                   style="width: 100%; margin-top: 15px; font-size: 1.2em;">مشاهدة الدرس الأول</a>
+                <p style="margin-top: 15px; font-size: 0.9em; color: var(--color-text-light);">يجب تسجيل الدخول للوصول إلى المحتوى.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 أكاديمية النجاح. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        checkAuthenticationAndRedirect(true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية النجاح - الرئيسية</title>
+    <link rel="stylesheet" href="css/colors.css"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="js/images/logo.png" alt="شعار الأكاديمية" style="height: 40px; margin-top: -5px;">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="btn btn-primary" style="margin-right: 0;">الرئيسية</a>
+            <a href="courses.html">الكورسات</a>
+            <a href="profile.html">بروفايلي</a>
+            <a href="#" onclick="logout()" class="btn btn-secondary">تسجيل الخروج</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-color: var(--color-primary); color: white; padding: 100px 5%; text-align: center;">
+        <div class="container">
+            <h1>أبواب المعرفة بين يديك: تعلم، أتقن، وتميز</h1>
+            <p style="font-size: 1.2em; margin: 20px auto; max-width: 700px; line-height: 1.6;">جميع كورساتنا مجانية ومقدمة من ملفاتنا الخاصة لضمان أفضل تجربة.</p>
+            <a href="courses.html" class="btn btn-secondary" style="font-size: 1.1em; padding: 12px 30px;">ابدأ رحلتك التعليمية الآن</a>
+        </div>
+    </section>
+
+    <section class="featured-courses" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">الكورسات الأكثر طلباً مع وسيم القيسي</h2>
+            
+            <div class="courses-grid">
+                <div class="course-card python">
+                    <img data-src="course_thumbnails/course-python.jpg" alt="برمجة بايثون" style="opacity: 0; transition: opacity 0.5s;" src="placeholder.jpg">
+                    <div class="card-content">
+                        <h3>البرمجة بلغة بايثون للمبتدئين</h3>
+                        <p class="card-meta">المدرب: وسيم القيسي | <span class="star-rating">⭐️⭐️⭐️⭐️⭐️ مجاني</span></p>
+                        <p>تعلم الأساسيات القوية لأكثر لغات البرمجة شيوعاً.</p>
+                        <a href="course-detail.html?id=python101" class="btn btn-primary" style="margin-top: 10px; width: 100%;">مشاهدة التفاصيل</a>
+                    </div>
+                </div>
+                <div class="course-card htmlcss">
+                    <img data-src="course_thumbnails/course-web.jpg" alt="HTML CSS" style="opacity: 0; transition: opacity 0.5s;" src="placeholder.jpg">
+                    <div class="card-content">
+                        <h3>أساسيات HTML5 و CSS3 للمواقع العصرية</h3>
+                        <p class="card-meta">المدرب: وسيم القيسي | <span class="star-rating">⭐️⭐️⭐️⭐️⭐️ مجاني</span></p>
+                        <p>بناء الهيكل والتصميم الأنيق لأي موقع إلكتروني.</p>
+                        <a href="course-detail.html?id=htmlcss101" class="btn btn-primary" style="margin-top: 10px; width: 100%;">مشاهدة التفاصيل</a>
+                    </div>
+                </div>
+                <div class="course-card java">
+                    <img data-src="course_thumbnails/course-java.jpg" alt="برمجة جافا" style="opacity: 0; transition: opacity 0.5s;" src="placeholder.jpg">
+                    <div class="card-content">
+                        <h3>برمجة تطبيقات الأندرويد بلغة Java</h3>
+                        <p class="card-meta">المدرب: وسيم القيسي | <span class="star-rating">⭐️⭐️⭐️⭐️ مجاني</span></p>
+                        <p>تعلم Java من الصفر لتطوير برامج قوية.</p>
+                        <a href="course-detail.html?id=java101" class="btn btn-primary" style="margin-top: 10px; width: 100%;">مشاهدة التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="courses.html" class="btn btn-primary" style="padding: 12px 40px;">عرض كل الكورسات</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 أكاديمية النجاح. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        checkAuthenticationAndRedirect(true);
+    </script>
+</body>
+</html>
